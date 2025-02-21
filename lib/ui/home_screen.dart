@@ -1,5 +1,6 @@
 import 'package:absensiapp/ui/absent/absent_screen.dart';
 import 'package:absensiapp/ui/additional/additional_screen.dart';
+import 'package:absensiapp/ui/additional_history/additional_history_screen.dart';
 import 'package:absensiapp/ui/attend/attend_screen.dart';
 import 'package:absensiapp/ui/attendence_history/attendence_history_screen.dart';
 import 'package:flutter/material.dart';
@@ -136,7 +137,38 @@ class HomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const AdditionalDetailsScreen()));
+                                  AdditionalDetailsScreen(documentId: '', data: {},)));
+                    },
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/ic_4.webp'),
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          "Additional Details",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  // Additional Details (gambar keempat + form)
+                  child: InkWell(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  AdditionalHistoryScreen()));
                     },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,

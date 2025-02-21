@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 
 class AdditionalDetailsScreen extends StatefulWidget {
-  const AdditionalDetailsScreen({super.key});
+  const AdditionalDetailsScreen({super.key, required String documentId, required Map<String, dynamic> data});
 
   @override
   _AdditionalDetailsScreenState createState() =>
